@@ -25,27 +25,27 @@ function generateDynamicTable() {
     // An array to collect error messages
     let errorMessages = [];
 
-    // Validate row inputs
+    // Validate column inputs
     if (isNaN(hStart) || isNaN(hEnd)) {
         errorMessages.push('Please enter valid numbers for the row start and end values.');
     } else {
         if (hStart < minAllowed || hEnd > maxAllowed) {
-            errorMessages.push(`Row values must be between ${minAllowed} and ${maxAllowed}.`);
+            errorMessages.push(`Column values must be between ${minAllowed} and ${maxAllowed}.`);
         }
         if (hStart > hEnd) {
-            errorMessages.push('Row start value must be less than or equal to the end value.');
+            errorMessages.push('Column start value must be less than or equal to the end value.');
         }
     }
 
-    // Validate column inputs
+    // Validate row inputs
     if (isNaN(vStart) || isNaN(vEnd)) {
         errorMessages.push('Please enter valid numbers for the column start and end values.');
     } else {
         if (vStart < minAllowed || vEnd > maxAllowed) {
-            errorMessages.push(`Column values must be between ${minAllowed} and ${maxAllowed}.`);
+            errorMessages.push(`Row values must be between ${minAllowed} and ${maxAllowed}.`);
         }
         if (vStart > vEnd) {
-            errorMessages.push('Column start value must be less than or equal to the end value.');
+            errorMessages.push('Row start value must be less than or equal to the end value.');
         }
     }
 
