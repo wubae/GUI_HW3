@@ -30,10 +30,10 @@ function generateDynamicTable() {
         errorMessages.push('Please enter valid numbers for the row start and end values.');
     } else {
         if (hStart < minAllowed || hEnd > maxAllowed) {
-            errorMessages.push('Column values must be between ${minAllowed} and ${maxAllowed}.`);
+            errorMessages.push('Row values must be between ${minAllowed} and ${maxAllowed}.`);
         }
         if (hStart > hEnd) {
-            errorMessages.push('Column start value must be less than or equal to the end value.');
+            errorMessages.push('Row start value must be less than or equal to the end value.');
         }
     }
 
@@ -42,10 +42,10 @@ function generateDynamicTable() {
         errorMessages.push('Please enter valid numbers for the column start and end values.');
     } else {
         if (vStart < minAllowed || vEnd > maxAllowed) {
-            errorMessages.push(`Row values must be between ${minAllowed} and ${maxAllowed}.`);
+            errorMessages.push(`Column values must be between ${minAllowed} and ${maxAllowed}.`);
         }
         if (vStart > vEnd) {
-            errorMessages.push('Row start value must be less than or equal to the end value.');
+            errorMessages.push('Column start value must be less than or equal to the end value.');
         }
     }
 
